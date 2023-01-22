@@ -9,7 +9,7 @@
     <meta name="description" content="">
     <meta name="author" content="">
 
-    <title>Dashboard admin</title>
+    <title>Profil</title>
 
     <!-- Custom fonts for this template-->
     <link href="<?php echo base_url ('assets/fontawesome-free/css/all.min.css" rel="stylesheet')?>" type="text/css">
@@ -32,7 +32,7 @@
         <ul class="navbar-nav bg-gradient-primary sidebar sidebar-dark accordion" id="accordionSidebar">
 
             <!-- Sidebar - Brand -->
-            <a class="sidebar-brand d-flex align-items-center justify-content-center" href="index.html">
+            <a class="sidebar-brand d-flex align-items-center justify-content-center" href="<?php echo site_url ('beranda')?>">
                 <div class="sidebar-brand-text mx-3">UMKM Kedungwinangun</div>
             </a>
 
@@ -41,7 +41,7 @@
 
             <!-- Nav Item - Dashboard -->
             <li class="nav-item active">
-                <a class="nav-link" href="<?php echo site_url ('adminpanel/dashboard')?>">
+                <a class="nav-link" href="<?php echo site_url ('profilpenjual')?>">
                     <i class="fas fa-fw fa-tachometer-alt"></i>
                     <span>Dashboard</span></a>
             </li>
@@ -56,29 +56,32 @@
 
             <!-- Nav Item - Pages Collapse Menu -->
             <li class="nav-item">
-                <a class="nav-link collapsed" href="#" data-toggle="collapse" data-target="#collapseTwo"
-                    aria-expanded="true" aria-controls="collapseTwo">
-                    <i class="fas fa-fw fa-cog"></i>
-                    <span>Kelola Admin</span>
-                </a>
-                <div id="collapseTwo" class="collapse" aria-labelledby="headingTwo" data-parent="#accordionSidebar">
-                    <div class="bg-white py-2 collapse-inner rounded">
-                        <a class="collapse-item" href="<?php echo site_url('Penjual'); ?>">Penjual</a>
-                        <a class="collapse-item" href="<?php echo site_url('Toko'); ?>">Toko</a>
-                        <a class="collapse-item" href="<?php echo site_url('Produk'); ?>">Produk</a>
-                        <a class="collapse-item" href="<?php echo site_url('Pembeli'); ?>">Pembeli</a>
-                        <a class="collapse-item" href="#">Ongkir</a>
-                        <a class="collapse-item" href="#">Bank</a>
-                    </div>
-                </div>
+                <a class="nav-link" href="<?php echo site_url('Profilpenjual/toko'); ?>">
+                    <i class="fas fa-store-alt"></i>
+                    <span>Toko</span></a>
             </li>
-
+            <li class="nav-item">
+                <a class="nav-link" href="<?php echo site_url('Profilpenjual/produk'); ?>">
+                    <i class="fas fa-th-list"></i>
+                    <span>Produk</span></a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" href="<?php echo site_url('profilpenjual/pesananmasuk'); ?>">
+                    <i class="fas fa-shopping-bag"></i>
+                    <span>Pesanan masuk</span></a>
+            </li>
             <!-- Nav Item - Utilities Collapse Menu -->
             <li class="nav-item">
-                <a class="nav-link" href="<?php echo site_url('Kategori'); ?>">
-                    <i class="fas fa-th-list"></i>
-                    <span>Kelola Kategori</span></a>
+                <a class="nav-link" href="#">
+                    <i class="fas fa-clock"></i>
+                    <span>Pesanan hari ini</span></a>
             </li>
+            <li class="nav-item">
+                <a class="nav-link" href="#">
+                    <i class="fas fa-calendar-alt"></i>
+                    <span>Pesanan bulan ini</span></a>
+            </li>
+            
 
             <!-- Divider -->
             <hr class="sidebar-divider">
@@ -90,7 +93,7 @@
 
             <!-- Nav Item - Tables -->
             <li class="nav-item">
-                <a class="nav-link" href="<?php echo site_url('Adminpanel/logout'); ?>">
+                <a class="nav-link" href="<?php echo site_url('Beranda/logoutPembeli'); ?>">
                     <i class="fas fa-sign-out-alt"></i>
                     <span>Keluar</span></a>
             </li>
@@ -167,9 +170,8 @@
                         <li class="nav-item dropdown no-arrow">
                             <a class="nav-link dropdown-toggle" href="#" id="userDropdown" role="button"
                                 data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                                <span class="mr-2 d-none d-lg-inline text-gray-600 small">Annas Setiawan</span>
-                                <img class="img-profile rounded-circle"
-                                    src="./img/undraw_profile.svg">
+                                <span class="mr-2 d-none d-lg-inline text-gray-600 small"><?= $session_user->usernamePenjual?></span>
+                                
                             </a>
                             <!-- Dropdown - User Information -->
                             <div class="dropdown-menu dropdown-menu-right shadow animated--grow-in"

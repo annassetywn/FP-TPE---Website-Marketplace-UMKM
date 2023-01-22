@@ -3,6 +3,9 @@
 
 <!-- Page Heading -->
 <h1 class="h3 mb-2 text-gray-800">Kelola Penjual</h1>
+<a href="<?php echo base_url ('penjual/add')?>" class="btn btn-sm btn-primary"><i
+            class="fas fa-plus fa-sm text-white-50"></i> Tambah Penjual</a><br>
+<br>
 <?= ($this->session->flashdata('alert')); ?>
 <!-- DataTales Example -->
 <div class="card shadow mb-4">
@@ -45,6 +48,7 @@
                           <?php else : ?>
                               <a class="btn btn-danger" href="<?= site_url('penjual/status_penjual/' . $item->idPenjual); ?>"> Non Aktifkan </a>
                           <?php endif ?>
+                            <a class="btn btn-warning" href="<?= site_url('penjual/getid/' . $item->idPenjual); ?>"> Edit </a>
                           </td>
                         </tr><?php }
                         }else{?>

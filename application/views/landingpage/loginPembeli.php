@@ -9,7 +9,7 @@
     <meta name="description" content="">
     <meta name="author" content="">
 
-    <title>Login admin</title>
+    <title>Login Pembeli</title>
 
     <!-- Custom fonts for this template-->
 
@@ -22,9 +22,7 @@
     <link href="<?php echo base_url('css/sb-admin-2.css')?>" rel="stylesheet">
 
 </head>
-
-<body class="bg-gradient-primary">
-
+<body class="bg-dark">
     <div class="container">
 
         <!-- Outer Row -->
@@ -34,15 +32,14 @@
                     <div class="card-body p-0">
                         <!-- Nested Row within Card Body -->
                         <div class="row">
-                    
                             <div class="col-lg-12">
                                 <div class="p-5">
                                     <div class="text-center">
-                                        <h1 class="h4 text-gray-900 mb-4">Hello admin</h1>
+                                        <h1 class="h4 text-gray-900 mb-4">Login Pembeli</h1>
                                     </div>
-                                    <form method="POST" action="<?php echo site_url('adminpanel/actionLogin')?>" class="user">
+                                    <form method="POST" action="<?php echo site_url('landingpage/actionLoginPembeli')?>" class="user">
                                         <div class="form-group">
-                                            <input type="text" name="username" class="form-control form-control-user"
+                                            <input type="text" name="usernamePembeli" class="form-control form-control-user"
                                                 id="exampleInputEmail" aria-describedby="emailHelp"
                                                 placeholder="Username">
                                         </div>
@@ -60,17 +57,23 @@
                                         <button type="submit" class="btn btn-primary btn-user btn-block">
                                             Login
                                         </button>
+                                        <hr>
+                                        <a href="<?php echo site_url('landingpage/loginPenjual')?>" class="btn btn-google btn-user btn-block">
+                                        Menu Login Penjual
+                                        </a>
                                     </form>
+                                    <br>
+                                    <div class="text-center">
+                                    <a class="small" href="<?php echo site_url('landingpage')?>">Kembali</a>
+                                    </div>
+                                    
                                 </div>
                             </div>
                         </div>
                     </div>
                 </div>
-
             </div>
-
         </div>
-
     </div>
 
     <!-- Bootstrap core JavaScript-->

@@ -90,7 +90,5 @@ class Kategori extends CI_Controller
                   </div>');
     redirect('kategori');
   }
-  
-  
 
 }

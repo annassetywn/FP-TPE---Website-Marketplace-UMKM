@@ -5,7 +5,7 @@
         <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
         <meta name="description" content="" />
         <meta name="author" content="" />
-        <title>Welcome</title>
+        <title>Beranda</title>
         <!-- Favicon-->
         <link rel="icon" type="image/x-icon" href="assets/favicon.ico" />
         <!-- Bootstrap icons-->
@@ -34,13 +34,13 @@
                             </ul>
                         </li>
                     </ul>
-                    <a class="btn btn-outline-dark" href="<?php echo site_url('Landingpage/registrasi')?>" style="margin-right: 10px">
-                            <i class="bi bi-pencil-square"></i>
-                            Registrasi</a>
+                    <a class="btn btn-outline-dark" href="<?php echo site_url('beranda/logoutPembeli')?>" style="margin-right: 10px">
+                            <i class="bi bi-box-arrow-right"></i>
+                            Logout</a>
                    
-                        <a class="btn btn-outline-dark" href="<?php echo site_url('Landingpage/loginPembeli')?>">
+                        <a class="btn btn-outline-dark" href="<?php echo site_url('profilpembeli')?>">
                             <i class="bi bi-person-fill"></i>
-                            Login
+                            Profile
                         </a>
                 
                 </div>
