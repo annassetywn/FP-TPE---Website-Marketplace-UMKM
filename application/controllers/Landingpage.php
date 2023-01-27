@@ -54,7 +54,7 @@ class Landingpage extends CI_Controller {
            if($checking)
            {
                $this->session->set_flashdata('status','Registered Succesfully! Go to Login');
-               redirect('landingpage/login');
+               redirect('landingpage/loginPembeli');
            }
            else
            {

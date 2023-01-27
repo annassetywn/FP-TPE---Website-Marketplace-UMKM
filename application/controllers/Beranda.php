@@ -31,8 +31,13 @@ class Beranda extends CI_Controller
         redirect('landingpage');
   }
 
-  public function checkout(){
-    $produk = $this->m_checkout->find($id);
+  public function checkout($id){
+      $dataWhere = array('idProduk' => $id);
+      $data['produk'] = $this->m_checkout->get_by_id('tbl_produk', $dataWhere)->row_object();
+      $data['kategori'] = $this->m_crud->get_all_data('tbl_kategori')->result();
+      $data['ongkir'] = $this->m_crud->get_all_data('tbl_ongkir')->result();
+      $data['session_user'] = $this->db->get_where('tbl_pembeli' , ['usernamePembeli' => $this->session->userdata('userName')])->row();
+      $this->template->load('template/layout_beranda','beranda/checkout', $data);
   }
 
   public function insert_checkout(){

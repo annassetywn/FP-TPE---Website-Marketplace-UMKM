@@ -4,17 +4,11 @@ class m_checkout extends CI_Model
 
 {
 
-    public function find($id)
-	{
-		$result = $this->db->where('idProduk',$id)
-						   ->limit(1)
-						   ->get('tbl_produk');
-		if($result->num_rows() > 0)
-		{
-			return $result->row();
-		}else{
-			return array();
-		}
+	public function get_by_id($table,$id){
+		$this->db->join('tbl_toko', 'tbl_produk.idToko = tbl_toko.idToko');
+		
+		return $this->db->get_where($table,$id);
+
 	}
 
     public function insertCheckout($table, $data){

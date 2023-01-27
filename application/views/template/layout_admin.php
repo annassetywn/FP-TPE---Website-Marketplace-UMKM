@@ -67,8 +67,8 @@
                         <a class="collapse-item" href="<?php echo site_url('Toko'); ?>">Toko</a>
                         <a class="collapse-item" href="<?php echo site_url('Produk'); ?>">Produk</a>
                         <a class="collapse-item" href="<?php echo site_url('Pembeli'); ?>">Pembeli</a>
-                        <a class="collapse-item" href="#">Ongkir</a>
-                        <a class="collapse-item" href="#">Bank</a>
+                        <a class="collapse-item" href="<?php echo site_url('Ongkir'); ?>">Ongkir</a>
+                        <a class="collapse-item" href="<?php echo site_url('Bank'); ?>">Bank</a>
                     </div>
                 </div>
             </li>

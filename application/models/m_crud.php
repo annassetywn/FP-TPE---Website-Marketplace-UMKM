@@ -106,8 +106,8 @@ class m_crud extends CI_Model{
 		$this->db->from('tbl_toko');
 		$this->db->where('idPenjual', $this->session->userdata('idPenjual'));
 		$this->db->join('tbl_order', 'tbl_order.idToko = tbl_toko.idToko');
-		$this->db->join('tbl_produk', 'tbl_produk.idToko = tbl_toko.idToko');
 		$this->db->join('tbl_detailOrder', 'tbl_order.idOrder = tbl_detailOrder.idOrder');
+		$this->db->join('tbl_produk', 'tbl_detailorder.idProduk = tbl_produk.idProduk');
 		$this->db->join('tbl_pembeli', 'tbl_pembeli.idPembeli = tbl_Order.idPembeli');
 		$this->db->join('tbl_ongkir', 'tbl_ongkir.idOngkir = tbl_Order.idOngkir');
 		return $this->db->get();

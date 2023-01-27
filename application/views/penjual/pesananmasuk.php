@@ -17,7 +17,8 @@
                     <tr>
                         <th>No</th>
                         <th>Tanggal Pesanan</th>
-                        <th>Nama Toko</th>
+                        <th>Nama Pembeli</th>
+                        <th>Telepon Pembeli</th>
                         <th>Nama Produk</th>
                         <th>Jumlah</th>
                         <th>Alamat Pembeli</th>
@@ -35,7 +36,8 @@
                         <tr>
                           <td><?= $no++; ?></td>
                           <td><?= $item->tglOrder; ?></td>
-                          <td><?= $item->namaToko; ?></td>
+                          <td><?= $item->namalengkapPembeli; ?></td>
+                          <td><?= $item->teleponPembeli; ?></td>
                           <td><?= $item->namaProduk; ?></td>
                           <td><?= $item->jumlah; ?></td>
                           <td><?= $item->alamatPembeli; ?></td>

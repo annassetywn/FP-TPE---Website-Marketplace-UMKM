@@ -31,8 +31,4 @@ class produk extends CI_Controller
                   </div>');
     redirect('produk');
   }
-
-
-
-
 }
